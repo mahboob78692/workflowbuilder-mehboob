@@ -1,0 +1,51 @@
+.workflow-canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: linear-gradient(to bottom, #f5f7fa 0%, #c3cfe2 100%);
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+}
+
+.workflow-canvas-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.workflow-connection {
+  transition: stroke 0.3s ease;
+  pointer-events: stroke;
+}
+
+.workflow-connection:hover {
+  stroke: #2196F3;
+  stroke-width: 3;
+}
+
+.branch-label {
+  pointer-events: none;
+  user-select: none;
+  font-weight: 500;
+}
+
+.workflow-canvas-wrapper {
+  position: relative;
+  min-width: 800px;
+  min-height: 200px;
+}
+
+.workflow-canvas-nodes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+

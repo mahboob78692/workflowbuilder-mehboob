@@ -1,0 +1,147 @@
+.workflow-node {
+  position: absolute;
+  width: 200px;
+  min-height: 80px;
+  background: white;
+  border: 3px solid;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.workflow-node:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, -50%) scale(1.02);
+}
+
+.workflow-node[data-node-type="start"] {
+  border-color: #4CAF50;
+}
+
+.workflow-node[data-node-type="action"] {
+  border-color: #2196F3;
+}
+
+.workflow-node[data-node-type="branch"] {
+  border-color: #FF9800;
+}
+
+.workflow-node[data-node-type="end"] {
+  border-color: #F44336;
+}
+
+.node-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.node-type-badge {
+  position: absolute;
+  top: -12px;
+  left: 12px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.node-label-container {
+  margin-top: 8px;
+  cursor: text;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.node-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  word-break: break-word;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.node-label:hover {
+  background-color: #f5f5f5;
+}
+
+.node-label-input {
+  width: 100%;
+  border: 2px solid #2196F3;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  outline: none;
+  background: white;
+}
+
+.node-branch-indicator {
+  font-size: 11px;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.node-controls {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.workflow-node:hover .node-controls {
+  opacity: 1;
+}
+
+.node-control-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.node-add-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.node-add-btn:hover {
+  background: #45a049;
+  transform: scale(1.1);
+}
+
+.node-delete-btn {
+  background: #F44336;
+  color: white;
+}
+
+.node-delete-btn:hover {
+  background: #da190b;
+  transform: scale(1.1);
+}
+

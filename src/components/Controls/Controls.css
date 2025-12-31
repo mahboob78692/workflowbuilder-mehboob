@@ -1,0 +1,78 @@
+.add-node-menu {
+  position: absolute;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 180px;
+  transform: translate(-50%, 10px);
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 10px);
+  }
+}
+
+.add-node-menu-header {
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f9f9f9;
+  border-radius: 8px 8px 0 0;
+}
+
+.add-node-menu-items {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.add-node-menu-item {
+  padding: 12px 16px;
+  border: none;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  color: #333;
+}
+
+.add-node-menu-item:hover {
+  background: #f5f5f5;
+  transform: translateX(4px);
+}
+
+.add-node-menu-item[data-node-type="action"]:hover {
+  background: #e3f2fd;
+  border-left: 4px solid #2196F3;
+}
+
+.add-node-menu-item[data-node-type="branch"]:hover {
+  background: #fff3e0;
+  border-left: 4px solid #FF9800;
+}
+
+.add-node-menu-item[data-node-type="end"]:hover {
+  background: #ffebee;
+  border-left: 4px solid #F44336;
+}
+
+.menu-item-label {
+  font-weight: 500;
+}
+
