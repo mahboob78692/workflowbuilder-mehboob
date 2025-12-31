@@ -26,3 +26,4 @@ $packageJsonContent = @'
 $packageJsonContent | Out-File -FilePath "package.json" -Encoding utf8 -NoNewline
 Write-Host "✓ package.json created successfully!" -ForegroundColor Green
 
+

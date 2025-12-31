@@ -24,3 +24,4 @@ try {
 Write-Host ""
 Write-Host "If both show ✓, you're ready to run 'npm install' and 'npm run dev'!" -ForegroundColor Green
 
+
